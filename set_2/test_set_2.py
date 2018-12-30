@@ -17,7 +17,7 @@ class TestSetTwo(unittest.TestCase):
         """Problem 1_1"""
         from set_2_for_testing import get_Q_f_problem_1_1
         Q_f = get_Q_f_problem_1_1()
-        self.assertTrue(np.all(np.linalg.eigvals(Q_f) >= 0), "Q_f must be positive definite")     
+        self.assertTrue(np.all(np.linalg.eigvals(Q_f) >= 0), "Q_f must be positive definite")
         self.assertEqual(Q_f.shape, (3,3), "Q_f must be 3x3")
         self.assertTrue(np.allclose(Q_f.transpose(), Q_f), "Q_f must be symmetric")
         self.assertLessEqual(np.sum(np.power(Q_f[:2,:],2)), 1e-6, "Q_f must not depend on x or y")
@@ -45,8 +45,7 @@ class TestSetTwo(unittest.TestCase):
         """Problem 1_2"""
         from set_2_for_testing import get_Q_f_problem_1_2
         Q_f = get_Q_f_problem_1_2()
-
-        self.assertTrue(np.all(np.linalg.eigvals(Q_f) >= 0), "Q_f must be positive definite")     
+        self.assertTrue(np.all(np.linalg.eigvals(Q_f) >= 0), "Q_f must be positive definite")
         self.assertEqual(Q_f.shape, (3,3), "Q_f must be 3x3")
         self.assertTrue(np.allclose(Q_f.transpose(), Q_f), "Q_f must be symmetric")
         self.assertLessEqual(np.sum(np.power(Q_f[2,:],2)), 1e-6, "Q_f must not depend on yaw.")
@@ -77,7 +76,7 @@ class TestSetTwo(unittest.TestCase):
     @timeout_decorator.timeout(1.0)
     def test_problem_3_1_time_to_go(self):
         """Problem 3_1 Time (Cost) To Go"""
-        from set_2_for_testing import get_optimal_time_to_go_problem_3_1 
+        from set_2_for_testing import get_optimal_time_to_go_problem_3_1
         
         q_s = [5.0, -10.0, 0.0]
         qdot = 15.0
