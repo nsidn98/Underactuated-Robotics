@@ -1,5 +1,5 @@
 # Underactuated-Robotics
-Code for the MIT OCW Underactuated Robotics
+Code for the MIT OCW Underactuated Robotics 6.832
 
 `./docker_run_notebook.sh drake-20180205 .`
 
